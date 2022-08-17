@@ -1,0 +1,150 @@
+/* font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif; */
+
+.product-card {
+    width: 80%;
+    margin: 40px auto;
+    display: flex;
+    align-items: stretch;
+}
+
+.product-image,
+.product-details {
+    flex-basis: 50%;
+    box-sizing: border-box;
+}
+
+.product-image img {
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-details {
+    padding: 40px;
+    background-color: #fff;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.product-price {
+    display: flex;
+    flex-direction: row;
+}
+
+.product-button {
+    display: flex;
+    justify-content: center;
+}
+
+/* Typography  and Colors */
+body {
+    background-color: hsl(30, 38%, 92%);
+}
+
+p {
+    font-size: 1em;
+    color: hsl(228, 12%, 48%);
+}
+
+.product-category {
+    font-size: 1em;
+    color: hsl(228, 12%, 48%);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.product-name {
+    font-size: 2em;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.product-name,
+.sale-price {
+    font-family: 'Fraunces', serif;
+}
+
+.product-category,
+.product-description,
+.main-price,
+.product-button button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+}
+
+.sale-price {
+    color: hsl(158, 36%, 37%);
+    font-size: 2em;
+    font-weight: 700;
+    margin: 10px 20px 20px 0;
+
+}
+
+.main-price {
+    text-decoration: line-through;
+}
+
+.product-button button {
+    background: hsl(158, 36%, 37%);
+    border: none;
+    color: white;
+    font-size: 1em;
+    font-weight: 700;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.product-button button:hover {
+    background-color: #5d7912;
+    border-radius: 15px;
+}
+
+
+
+.product-button button img {
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 720px) {
+    .product-card {
+        flex-direction: column;
+        width: 60%
+    }
+
+    .product-image img {
+        border-radius: 20px 20px 0 0;
+        margin-bottom: -10px;
+    }
+
+    .product-details {
+        border-radius: 0 0 20px 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .product-price {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .sale-price,
+    .main-price {
+        margin: 10px;
+    }
+
+    .product-button button img {
+        display: none;
+    }
+}
